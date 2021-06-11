@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Jogo da Velha</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <div id="inicio" class="inicioPronto">
+      <div class="fundoInicio">
+        <div class="titulo"><h1>JOGO DA VELHA</h1></div>
+        <div class="logo"><img src="images/logo.png"></div>
+        <div class="menu">
+          <p onmouseover="tutorial()"onclick="toque.play()" id="jogar">Jogar</p>
+        </div>
+        <div id="comoJogar" class="jogarInvisivel">
+          <p>No modo básico do jogo, participam duas pessoas, que jogam alternadamente, preenchendo cada um dos espaços vazios. Cada participante deve usar um símbolo (X ou O). Vence o jogador que conseguir formar primeiro uma linha com três símbolos iguais, seja ela na horizontal, vertical ou diagonal.</p>
+        </div>
+      </div>
+    </div>
+   
+    <div id="analises">
+      <div class="fundoAnalise">
+        <div class="quadroTotal">
+          <div class="quadroAnalise">
+            <div class="paragrafo">
+              <h2 id="diaSem"></h2>
+              <p id="registro"></p>
+            </div>
+          </div>
+          <div class="quadroVencedor">
+            <div class="fundoVencedor">
+              <p style="font-size: 1.5em" id="vencedorRegistrado"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <div id="quadro">
+     <div class="gradeQuadro">
+      <div onclick="pong.play()" style="border-top: none; border-left: none" class="quadrado" id="pri1" play=""></div>
+      <div onclick="pong.play()" style="border-top: none" class="quadrado" id="pri2" play=""></div>
+      <div onclick="pong.play()" style="border-top: none; border-right: none;" class="quadrado" id="pri3" play=""></div>
+      <div onclick="pong.play()" style="border-left: none" class="quadrado" id="seg1" play=""></div>
+      <div onclick="pong.play()" class="quadrado "id="seg2" play=""></div>
+      <div onclick="pong.play()" style="border-right: none;" class="quadrado" id="seg3" play=""></div>
+      <div onclick="pong.play()" style="border-left: none; border-bottom: none" class="quadrado" id="ter1" play=""></div> 
+      <div onclick="pong.play()" style="border-bottom: none" class="quadrado" id="ter2" play=""></div> 
+      <div onclick="pong.play()" style="border-right: none; border-bottom: none" class="quadrado" id="ter3" play=""></div>
+     </div> 
+   </div>
+  <div class="dentroReset">
+    <div id="vezJogadorOp">
+      <p>Vez do: </p>
+      <img>
+    </div>
+    <div id="reset">
+      <button id="reload" onclick="location.reload()" >Reload</button>
+    </div>
+  </div>
+
+  <div class="aviso">
+    <div class="avisoDentro">
+    <div class="escrito">
+      <h1>Aviso</h1>
+      <h3>Utilize um dispositivo com uma tela maior para se adaptar ao jogo</h3>
+    </div>
+    </div>
+  </div>
+
+  
+    
+    <script src="script.js"></script>
+  </body>
+</html>

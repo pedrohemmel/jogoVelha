@@ -1,0 +1,261 @@
+
+body {
+width: 100%;
+height: 100%;
+margin: 0;
+font-family: "system-ui","-apple-system","Segoe UI","Helvetica Neue","Noto Sans","Liberation Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji", "SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New","monospace";
+}
+
+#analises {
+  width: 40%;
+  height: 100vh;
+  float: left;
+  padding: 0 20px 0 0;
+}
+
+.fundoAnalise {
+  background-color: aqua;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#quadro {
+  width: 600px;
+  height: 100vh;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.gradeQuadro {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.quadrado {
+  height: 200px;
+  width: 200px;
+  border: 5px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.quadrado img {
+  display: flex;
+  justify-items: center;
+}
+
+#vezJogadorOp {
+  padding: 30px 0 0 0;
+}
+#vezJogadorOp p {
+  float: left;
+  padding: 0 0 0 30px;
+}
+#vezJogadorOp img {
+  float: left;
+  padding: 0 0 0 10px;
+  width: 50px;
+  height: 50px;
+}
+
+#paragrafo {
+  padding: 30px 0 0 0;
+}
+
+.quadroTotal {
+  width: 90%;
+  height: 90%;
+}
+
+.quadroAnalise {
+  width: 100%;
+  height: 70%;
+  background-color: white;
+  float: left;
+  border-radius: 20px;
+  box-shadow: 0px 0px 6px rgb(214, 213, 213);
+}
+
+.quadroVencedor {
+  float: left;
+  width: 100%;
+  height: 20%;
+  padding: 20px 0 0 0;
+}
+
+.fundoVencedor {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 6px rgb(214, 213, 213);
+}
+
+.fundoVencedor p {
+  width: 100%;
+  text-align: center;
+}
+
+.paragrafo h2 {
+  text-align: center;
+}
+
+.paragrafo p {
+  text-align: center;
+}
+
+#inicio { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.inicioPronto {
+  margin-top: 0;
+}
+
+.inicioVisivel {
+  margin-top: 0;
+  transition: margin-top 1.5s;
+}
+
+.inicioInvisivel {
+  margin-top: -100%;
+  transition: margin-top 1.5s;
+}
+
+.fundoInicio {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  
+}
+
+.titulo {
+  padding: 60px 0 0 0;
+  width: 100%;
+}
+
+.titulo h1 {
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.menu {
+  padding: 20px 0 0 0;
+  height: 150px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  
+}
+
+.menu p {
+  border: 1px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  height: 50px;
+  width: 150px;
+  font-weight: bold;
+  user-select: none;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px rgb(151, 151, 151);
+  transition: 0.3s
+}
+
+.menu p:hover {
+  font-size: 1.05em;
+}
+
+.jogarInvisivel {
+  display: none;
+}
+
+.jogarVisivel {
+  width: 250px;
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 0 10px 0 10px;
+  box-shadow: 0px 0px 5px rgb(150, 148, 148);
+}
+
+.jogarVisivel p {
+  width: 100%;
+  text-align: center;
+  
+}
+
+#reload {
+  width: 80px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+
+}
+
+.dentroReset {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.aviso {
+  display: none;
+}
+
+@media screen and (max-width: 1275px) {
+  #analises {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .aviso {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: aqua;
+  }
+  .avisoDentro {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center
+  }
+
+  .escrito {
+    width: 300px;
+    text-align: center;
+    text-shadow: 0px 0px 10px;
+  }
+}
+
+
