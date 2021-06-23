@@ -125,9 +125,8 @@ function mostraDia() {
 }
 
 //Essa função vai registrar todos movimentos dos jogadores
-function registro() {
-  var clique = '';
-  var usuario = '';
+function registro(idQuadrado) {
+  
   var pri1 = document.getElementById('pri1').getAttribute('play');
   var pri2 = document.getElementById('pri2').getAttribute('play');
   var pri3 = document.getElementById('pri3').getAttribute('play');
@@ -140,51 +139,47 @@ function registro() {
 
   var registro = document.getElementById('registro');
   var registrado = '';
+  armazenaUsuario = '';
+  var clique = '';
+  var usuario = '';
 
 //fazendo a condição para que saiba qual jogador está movimentando e qual é a posição
-  if(pri1 != '') {
+  if(idQuadrado == 'pri1') {
     clique = 'A1';
-    usuario = pri1;
   } 
-  if(seg1 != '') {
+  else if(idQuadrado == 'seg1') {
     clique = 'B1';
-    usuario = seg1;
   } 
-  if(ter1 != '') {
+  else if(idQuadrado == 'ter1') {
     clique = 'C1';
-    usuario = ter1;
-  }
-  if(pri2 != '') {
+  } 
+  else if(idQuadrado == 'pri2') {
     clique = 'A2';
-    usuario = pri2;
   } 
-  if(seg2 != '') {
+  else if(idQuadrado == 'seg2') {
     clique = 'B2';
-    usuario = seg2;
-  }
-  if(ter2 != '') {
+  } 
+  else if(idQuadrado == 'ter2') {
     clique = 'C2';
-    usuario = ter2;
-  }
-  if(pri3 != '') {
+  } 
+ else if(idQuadrado == 'pri3') {
     clique = 'A3';
-    usuario = pri3;
   } 
-  if(seg3 != '') {
+  else if(idQuadrado == 'seg3') {
     clique = 'B3';
-    usuario = seg3;
   } 
-  if(ter3 != '') {
+  else {
     clique = 'C3';
-    usuario = ter3;
-  }
+  } 
+
 
   //armazenando e printando sequencia dos registros
-  if(usuario != '') {
-    registrado = 'O ' + usuario + ' utilizou a posição ' + clique + '\n';
+
+    registrado = 'O ' + jogadorDaVez + ' utilizou a posição ' + clique + '\n\n';
     armazenaRegistro += registrado;
     registro.innerText = armazenaRegistro; 
-  }
+    
+  
   
 }
 
@@ -193,6 +188,7 @@ function detectarQuadrado() {
   var quadrados = document.getElementsByClassName('quadrado');
   //for para detectar cada quadrado
   for(var contagem = 0; contagem < quadrados.length; contagem++) {
+    let quad = quadrados[contagem];
     //funcao que identifica o quadrado ao clicar (click)
     quadrados[contagem].addEventListener("click", function() {
       if(ganhou) {
@@ -212,7 +208,7 @@ function detectarQuadrado() {
           jogadorDaVez = jogador1;
         }
         atualizaVez();
-        registro();
+        registro(quad.id);
         venceu();
       }
     });
