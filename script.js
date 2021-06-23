@@ -74,7 +74,10 @@ async function venceu() {
 
 
   //mostrando quem venceu e trazendo uma função que espera um pouco ate o quadrado ser preenchido para efetuar o alert
-  if(vencer != '') {
+  if(pri1 != '' && pri2 != '' && pri3 != '' && seg1 != '' && seg2 != '' && seg3 != '' && ter1 != '' && ter2 != '' && ter3 != '') {
+    ganhou = true;
+    vencedor.innerText = 'Empate! Recomece o jogo';
+  } else if(vencer != '') {
     ganhou = true;
     vencedor.innerText = 'O ganhador foi o: ' + vencer;
     fogos.play();
